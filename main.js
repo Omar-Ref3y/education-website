@@ -19,12 +19,7 @@ faqOpen.forEach(faq=>{
         }, 10000);
     })
 })
-var swiper = new Swiper(".mySwiper", {
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
+
   const navMenu=document.querySelector(".nav_menu")
   const menuBtn=document.querySelector("#open-menu-btn")
   const closeBtn=document.querySelector("#close-menu-btn")
@@ -38,3 +33,9 @@ var swiper = new Swiper(".mySwiper", {
     menuBtn.style.display="inline-block"
     closeBtn.style.display="none"
   })
+  var swiper = new Swiper(".mySwiper", {
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
