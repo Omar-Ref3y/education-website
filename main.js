@@ -33,6 +33,26 @@ faqOpen.forEach(faq=>{
     menuBtn.style.display="inline-block"
     closeBtn.style.display="none"
   })
+  const counterEl=document.querySelectorAll(".counter")
+  counterEl.forEach(ele=>{
+    ele.innerText="0"
+
+    function increment() {
+      let currentNum= +ele.innerText
+      const dataCeil= +ele.getAttribute("data-ceil")
+      const increase=dataCeil / 26
+      
+      if(currentNum < dataCeil){
+        currentNum=Math.floor(currentNum + increase) ;
+        ele.innerText=currentNum;
+        setTimeout(increment,15)
+      }else{
+        ele.innerText=dataCeil
+      }
+    }
+    increment()
+  })
+
   var swiper = new Swiper(".mySwiper", {
     navigation: {
       nextEl: ".swiper-button-next",
